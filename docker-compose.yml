@@ -1,0 +1,11 @@
+
+version: "3.9"
+services:
+  memlink-api:
+    build: .
+    container_name: memlink_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/sessions:/app/data/sessions
+    restart: unless-stopped
